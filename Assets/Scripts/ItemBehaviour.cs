@@ -7,6 +7,8 @@ public class ItemBehaviour : MonoBehaviour
     public TextAsset json;
     public string startId;
     public Dictionary<string, JsonData> textData;
+    string curentId = null;
+    ObjectInteraction lastUser;
 
     [System.Serializable]
     public class JsonData
@@ -39,8 +41,27 @@ public class ItemBehaviour : MonoBehaviour
         }
     }
 
-    public void Interact()
+    public void Interact(GameObject user)
     {
+        lastUser = user.GetComponent<ObjectInteraction>();
+        curentId = startId;
+        GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId].emmiter, textData[curentId].caption, textData[curentId].important);
+        curentId = textData[curentId].nextUnlocked;
+    }
 
+    private void Update()
+    {
+        if (lastUser && lastUser.lastUsed == gameObject && curentId != null && curentId != "")
+        {
+            if (lastUser.GetComponent<SpeechDisplayer>().ended)
+            {
+                GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId].emmiter, textData[curentId].caption, textData[curentId].important);
+                curentId = textData[curentId].nextUnlocked;
+            }
+        }
+        else
+        {
+            curentId = null;
+        }
     }
 }

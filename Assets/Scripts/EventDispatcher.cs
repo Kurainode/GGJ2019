@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EventDispatcher : MonoBehaviour
 {
-    void Talk(string character, List<string> text, bool important)
+    public void Talk(string character, string text, bool important)
     {
         if (important)
         {
@@ -13,7 +13,11 @@ public class EventDispatcher : MonoBehaviour
         else
         {
             GameObject characterGO = GameObject.Find(character);
-            
+            if (characterGO)
+            {
+                var speechDisplayer = characterGO.GetComponent<SpeechDisplayer>();
+                speechDisplayer.Text = text;
+            }
         }
     }
 }

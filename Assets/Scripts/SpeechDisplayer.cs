@@ -7,6 +7,7 @@ public class SpeechDisplayer : MonoBehaviour
 {
     public GameObject textModel;
     public Transform interactionTextContainer;
+    public bool ended;
     InteractionText interactionText;
     public string Text
     {
@@ -14,6 +15,7 @@ public class SpeechDisplayer : MonoBehaviour
         {
             _text = value;
             interactionText.TextToDisplay = value;
+            ended = false;
         }
     }
     string _text;
@@ -24,10 +26,17 @@ public class SpeechDisplayer : MonoBehaviour
         interactionTextGO.transform.SetParent(interactionTextContainer);
         interactionTextGO.transform.localScale = new Vector3(1, 1, 1);
         interactionText = interactionTextGO.GetComponent<InteractionText>();
+        ended = true;
     }
 
     private void Update()
     {
         interactionText.transform.position = new Vector3(transform.position.x, transform.position.y + GetComponent<Renderer>().bounds.extents.y + 0.5f, 0.0f);
+        ended = interactionText.ended;
+    }
+
+    private void LateUpdate()
+    {
+        ended = interactionText.ended;
     }
 }

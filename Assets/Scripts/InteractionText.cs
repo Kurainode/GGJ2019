@@ -29,7 +29,6 @@ public class InteractionText : MonoBehaviour
     private void Awake()
     {
         textComponent = GetComponent<Text>();
-        ended = true;
     }
 
     private void Update()
@@ -46,6 +45,7 @@ public class InteractionText : MonoBehaviour
         else
         {
             textComponent.text = _text.Substring(0, len);
+            ended = false;
         }
     }
 }

@@ -21,7 +21,7 @@
         "nextLocked": "",
         "trigger": "",
         "pickable": false,
-		"important": true
+		"important": false
 	},
 	{
 		"id": "3",
