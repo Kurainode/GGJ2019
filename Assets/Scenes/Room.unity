@@ -666,6 +666,7 @@ GameObject:
   - component: {fileID: 674270550}
   - component: {fileID: 674270549}
   - component: {fileID: 674270551}
+  - component: {fileID: 674270552}
   m_Layer: 0
   m_Name: Test Furniture (3)
   m_TagString: Untagged
@@ -760,6 +761,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0.3
+--- !u!114 &674270552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674270547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598b46463ece514eabe777a5e661a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 0}
+  startId: 
 --- !u!1 &776155576
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +787,7 @@ GameObject:
   - component: {fileID: 776155579}
   - component: {fileID: 776155578}
   - component: {fileID: 776155580}
+  - component: {fileID: 776155581}
   m_Layer: 0
   m_Name: Test Furniture
   m_TagString: Untagged
@@ -866,6 +882,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0.3
+--- !u!114 &776155581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776155576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598b46463ece514eabe777a5e661a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 4900000, guid: 2b9a3ed90bbb2ff46b52c3cc383e21d3, type: 3}
+  startId: 1
 --- !u!1 &949662711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,6 +1307,7 @@ GameObject:
   - component: {fileID: 1284492553}
   - component: {fileID: 1284492552}
   - component: {fileID: 1284492551}
+  - component: {fileID: 1284492554}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1332,6 +1363,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1284492554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284492550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29782087c993bc649bf2f7067c6c5adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328462913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1466,7 @@ GameObject:
   - component: {fileID: 1341844151}
   - component: {fileID: 1341844150}
   - component: {fileID: 1341844152}
+  - component: {fileID: 1341844153}
   m_Layer: 0
   m_Name: Test Furniture (2)
   m_TagString: Untagged
@@ -1517,6 +1561,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0.3
+--- !u!114 &1341844153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341844148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598b46463ece514eabe777a5e661a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 0}
+  startId: 
 --- !u!1 &1456308470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1621,7 @@ GameObject:
   - component: {fileID: 1514172309}
   - component: {fileID: 1514172308}
   - component: {fileID: 1514172310}
+  - component: {fileID: 1514172311}
   m_Layer: 0
   m_Name: Test Furniture (4)
   m_TagString: Untagged
@@ -1657,6 +1716,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0.3
+--- !u!114 &1514172311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514172306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598b46463ece514eabe777a5e661a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 0}
+  startId: 
 --- !u!1 &1663738144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,6 +1855,7 @@ GameObject:
   - component: {fileID: 1775043638}
   - component: {fileID: 1775043637}
   - component: {fileID: 1775043639}
+  - component: {fileID: 1775043640}
   m_Layer: 0
   m_Name: Test Furniture (1)
   m_TagString: Untagged
@@ -1876,6 +1950,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0.3
+--- !u!114 &1775043640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775043635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1598b46463ece514eabe777a5e661a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: {fileID: 0}
+  startId: 
 --- !u!1 &1816567518
 GameObject:
   m_ObjectHideFlags: 0

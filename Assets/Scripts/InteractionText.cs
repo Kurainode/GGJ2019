@@ -7,49 +7,45 @@ public class InteractionText : MonoBehaviour
 {
     public float charPerSecond;
     public float timeAtEnd;
-    public List<string> TextToDisplay
+    public bool ended;
+    public string TextToDisplay
     {
         get
         {
-            return _textArray;
+            return _text;
         }
 
         set
         {
-            _textArray = value;
-            textIndex = 0;
+            _text = value;
+            ended = false;
             elapsed = 0.0f;
         }
     }
-    List<string> _textArray;
-    int textIndex;
+    string _text = "";
     Text textComponent;
     float elapsed;
 
     private void Awake()
     {
         textComponent = GetComponent<Text>();
-        TextToDisplay = new List<string>{ "This object is really incredible", "This is another text", "Yet another" };
+        ended = true;
     }
 
     private void Update()
     {
-        if ((elapsed * charPerSecond >= _textArray[textIndex].Length + timeAtEnd * charPerSecond) && (textIndex < _textArray.Count - 1))
-        {
-            elapsed = 0.0f;
-            ++textIndex;
-        }
         elapsed += Time.deltaTime;
         int len = (int)(elapsed * charPerSecond);
-        if (len > _textArray[textIndex].Length)
-            len = _textArray[textIndex].Length;
-        if ((elapsed * charPerSecond >= _textArray[textIndex].Length + timeAtEnd * charPerSecond) && (textIndex >= _textArray.Count - 1))
+        if (len > _text.Length)
+            len = _text.Length;
+        if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond)
         {
             textComponent.text = "";
+            ended = true;
         }
         else
         {
-            textComponent.text = _textArray[textIndex].Substring(0, len);
+            textComponent.text = _text.Substring(0, len);
         }
     }
 }
