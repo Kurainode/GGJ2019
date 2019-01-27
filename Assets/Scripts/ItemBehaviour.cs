@@ -51,7 +51,6 @@ public class ItemBehaviour : MonoBehaviour
     {
         lastUser = user.GetComponent<ObjectInteraction>();
         curentId = startId;
-        if (curentId != null && curentId != "" && textData[curentId].important)
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
     }
 

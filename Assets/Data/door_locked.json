@@ -1,0 +1,14 @@
+[
+    {
+		"id": "1",
+        "caption": "The door is locked",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	}
+]
