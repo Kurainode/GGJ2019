@@ -52,6 +52,20 @@ public class ItemBehaviour : MonoBehaviour
         lastUser = user.GetComponent<ObjectInteraction>();
         curentId = startId;
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
+
+        if (textData[curentId].pickable)
+        {
+            InventoryScriptable.objectToPick = gameObject;
+            var messageSender = GetComponent<GlobalMessageEventSender>();
+            if (messageSender != null)
+            {
+                messageSender.GlobalMessage("PickItem");
+            }
+            else
+            {
+                Debug.LogError("Missing `GlobalMessageEventSender` component. Please add the behaviour so the items can be picked!");
+            }
+        }
     }
 
     private void Update()
