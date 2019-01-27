@@ -9,6 +9,7 @@ public class InteractionText : MonoBehaviour
     public float timeAtEnd;
     public bool ended;
     public bool manual;
+    public bool allDisplayed;
     public string TextToDisplay
     {
         get
@@ -20,6 +21,7 @@ public class InteractionText : MonoBehaviour
         {
             _text = value;
             ended = false;
+            allDisplayed = false;
             elapsed = 0.0f;
 
             if (runningCoroutine != null)
@@ -45,8 +47,11 @@ public class InteractionText : MonoBehaviour
         {
             elapsed += Time.deltaTime + 1.0f / charPerSecond;
             int len = (int)(elapsed * charPerSecond);
-            if (len > _text.Length)
+            if (len > _text.Length || allDisplayed)
+            {
                 len = _text.Length;
+                allDisplayed = true;
+            }
             else
                 GetComponent<AudioSource>().Play();
             if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond && !manual)
@@ -59,6 +64,10 @@ public class InteractionText : MonoBehaviour
                 textComponent.text = _text.Substring(0, len);
                 if (!manual)
                     ended = false;
+            }
+            if (allDisplayed)
+            {
+                textComponent.text = _text;
             }
             if (ended == true)
             {

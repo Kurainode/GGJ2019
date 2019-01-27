@@ -47,8 +47,10 @@ public class ImportantText : MonoBehaviour
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused = true;
         bool sameFrame = true;
         interactionText.ended = false;
-        while (sameFrame || !Input.GetButtonDown("Action"))
+        while (sameFrame || !Input.GetButtonDown("Action") || !interactionText.allDisplayed)
         {
+            if (!sameFrame && Input.GetButtonDown("Action"))
+                interactionText.allDisplayed = true;
             if (Input.GetAxis("Horizontal") > 0.5f)
             {
                 selectedChoice = 2;
