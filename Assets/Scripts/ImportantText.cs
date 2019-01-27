@@ -43,6 +43,7 @@ public class ImportantText : MonoBehaviour
 
     IEnumerator TextInteraction()
     {
+        GameObject.Find("Bottom Hider").GetComponent<Image>().fillAmount = 0;
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused = true;
         bool sameFrame = true;
         interactionText.ended = false;
@@ -71,5 +72,6 @@ public class ImportantText : MonoBehaviour
         }
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused = false;
         interactionText.ended = true;
+        GameObject.Find("Bottom Hider").GetComponent<Image>().fillAmount = 1;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemBehaviour : MonoBehaviour
 {
@@ -50,8 +51,8 @@ public class ItemBehaviour : MonoBehaviour
     {
         lastUser = user.GetComponent<ObjectInteraction>();
         curentId = startId;
+        if (curentId != null && curentId != "" && textData[curentId].important)
         GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
-        curentId = textData[curentId].nextUnlocked;
     }
 
     private void Update()
@@ -61,16 +62,17 @@ public class ItemBehaviour : MonoBehaviour
             if ((!textData[curentId].important && GameObject.Find(textData[curentId].emmiter).GetComponent<SpeechDisplayer>().ended)
                 || (textData[curentId].important && GameObject.Find("Important Text Canvas").GetComponent<ImportantText>().interactionText.ended))
             {
-                GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
                 if (textData[curentId].important && textData[curentId].haveChoice)
                 {
                     curentId = (GameObject.Find("Important Text Canvas").GetComponent<ImportantText>().selectedChoice == 1) ?
                         textData[curentId].nextChoice1 : textData[curentId].nextChoice2;
-                    Debug.Log(curentId);
                 }
-                else {
+                else
+                {
                     curentId = textData[curentId].nextUnlocked;
                 }
+                if (curentId != null && curentId != "")
+                    GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
             }
         }
         else
