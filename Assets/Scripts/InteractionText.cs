@@ -20,32 +20,52 @@ public class InteractionText : MonoBehaviour
             _text = value;
             ended = false;
             elapsed = 0.0f;
+
+            if (runningCoroutine != null)
+            {
+                StopCoroutine(runningCoroutine);
+            }
+            runningCoroutine = StartCoroutine(DisplayTextCharacterByCharacter());
         }
     }
     string _text = "";
     Text textComponent;
     float elapsed;
 
+    public float textSpeed = 0.06f;
+    Coroutine runningCoroutine;
+
     private void Awake()
     {
         textComponent = GetComponent<Text>();
     }
 
-    private void Update()
+    //private void Update()
+    //{
+        
+    //}
+
+    IEnumerator DisplayTextCharacterByCharacter()
     {
-        elapsed += Time.deltaTime;
-        int len = (int)(elapsed * charPerSecond);
-        if (len > _text.Length)
-            len = _text.Length;
-        if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond)
+        while (true)
         {
-            textComponent.text = "";
-            ended = true;
-        }
-        else
-        {
-            textComponent.text = _text.Substring(0, len);
-            ended = false;
+            elapsed += Time.deltaTime + textSpeed;
+            int len = (int)(elapsed * charPerSecond);
+            if (len > _text.Length)
+                len = _text.Length;
+            else
+                GetComponent<AudioSource>().Play();
+            if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond)
+            {
+                textComponent.text = "";
+                ended = true;
+            }
+            else
+            {
+                textComponent.text = _text.Substring(0, len);
+                ended = false;
+            }
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 }
