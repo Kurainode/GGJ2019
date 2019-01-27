@@ -25,8 +25,29 @@ public class PlayerMovement : MonoBehaviour
             movement.y *= 0.75f;
             position += movement;
             GetComponent<Animator>().SetFloat("walkSpeed", movement.magnitude);
-            GetComponent<Animator>().SetFloat("vertical", Input.GetAxis("Vertical"));
-            GetComponent<Animator>().SetFloat("horizontal", Input.GetAxis("Horizontal"));
+
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            {
+                if (movement.x > 0)
+                {
+                    GetComponent<Animator>().SetInteger("direction", 3); // 3 == right
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("direction", 1); // 1 == left
+                }
+            } 
+            else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
+            {
+                if (movement.y > 0)
+                {
+                    GetComponent<Animator>().SetInteger("direction", 2); // 2 == back
+                }
+                else
+                {
+                    GetComponent<Animator>().SetInteger("direction", 0); // 0 == front
+                }
+            }
             transform.position = position;
         }
         else
