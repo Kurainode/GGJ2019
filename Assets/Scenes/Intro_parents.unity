@@ -150,7 +150,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300006, guid: ab206f8d8ddca784ca4d512a7ce12f96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07570b8418855594c912495cfcb50780, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2491,11 +2491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9026077647059741099, guid: f8d42d9f4d7782c47b09bec2084a1d05,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9026077647059741097, guid: f8d42d9f4d7782c47b09bec2084a1d05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2551,16 +2546,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9026077647059741106, guid: f8d42d9f4d7782c47b09bec2084a1d05,
-        type: 3}
-      propertyPath: interactionTextContainer
-      value: 
-      objectReference: {fileID: 283800534}
     - target: {fileID: 9026077647059741096, guid: f8d42d9f4d7782c47b09bec2084a1d05,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9026077647059741099, guid: f8d42d9f4d7782c47b09bec2084a1d05,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026077647059741106, guid: f8d42d9f4d7782c47b09bec2084a1d05,
+        type: 3}
+      propertyPath: interactionTextContainer
+      value: 
+      objectReference: {fileID: 283800534}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d42d9f4d7782c47b09bec2084a1d05, type: 3}
 --- !u!1 &1927280254
