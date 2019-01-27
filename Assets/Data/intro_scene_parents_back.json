@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+        "caption": "Oh, you’re here ! Did you have fun in the house ?",
+        "label": "",
+        "emmiter": "Parents",
+        "require": "",
+        "nextUnlocked": "2",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+	},
+	{
+		"id": "2",
+        "caption": "How about we go replenish your little tummy, missy ?",
+        "label": "",
+        "emmiter": "Parents",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+	}
+]

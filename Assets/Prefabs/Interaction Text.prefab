@@ -131,10 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92748017d2a4f2947a5aecf169f6933d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charPerSecond: 12
+  charPerSecond: 24
   timeAtEnd: 2
   ended: 0
-  textSpeed: 0.06
+  manual: 0
+  allDisplayed: 0
 --- !u!82 &2106758304871374619
 AudioSource:
   m_ObjectHideFlags: 0

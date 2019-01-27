@@ -26,5 +26,10 @@ public class EventDispatcher : MonoBehaviour
                 speechDisplayer.Text = data.caption;
             }
         }
+
+        if (string.IsNullOrEmpty(data.trigger) == false)
+        {
+            GetComponent<GlobalMessageEventSender>().GlobalMessage(data.trigger);
+        }
     }
 }
