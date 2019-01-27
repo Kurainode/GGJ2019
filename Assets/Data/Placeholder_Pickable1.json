@@ -1,0 +1,14 @@
+[
+	{
+		"id": "1",
+    "caption": "I found a key",
+    "label": "",
+    "emmiter": "Player",
+    "require": "",
+    "nextUnlocked": "",
+    "nextLocked": "",
+    "trigger": "",
+    "pickable": true,
+		"important": false
+	}
+]

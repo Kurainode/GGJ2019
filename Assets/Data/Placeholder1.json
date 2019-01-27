@@ -1,0 +1,38 @@
+[
+	{
+		"id": "1",
+        "caption": "First Text",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "2",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	},
+	{
+		"id": "2",
+        "caption": "Second Text",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "3",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	},
+	{
+		"id": "3",
+        "caption": "Third Text",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	}
+]

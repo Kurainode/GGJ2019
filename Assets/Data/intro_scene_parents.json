@@ -1,0 +1,75 @@
+[
+	{
+		"id": "1",
+        "caption": "W…!",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "2",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+	},
+	{
+		"id": "2",
+        "caption": "Wa… up…",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "3",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+	},
+	{
+		"id": "3",
+        "caption": "Wake up!",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "4",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+    },
+	{
+		"id": "4",
+        "caption": "Look, it’s our new home !",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "5",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+    },
+	{
+		"id": "5",
+        "caption": "I know you’re sad to leave your friends but look how nice the city is… You will make new friends in no time !",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "6",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+    },
+	{
+		"id": "6",
+        "caption": "Well, enough ! We will take care of the unpacking of our luggages, so you can explore the house !",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "fadeout",
+        "pickable": false,
+		"important": true
+    }
+    
+]
