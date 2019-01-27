@@ -1,0 +1,38 @@
+[
+	{
+		"id": "1",
+        "caption": "Hey !",
+        "label": "",
+        "emmiter": "Ghost",
+        "require": "",
+        "nextUnlocked": "2",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	},
+	{
+		"id": "2",
+        "caption": "Hey, little girl !",
+        "label": "",
+        "emmiter": "Ghost",
+        "require": "",
+        "nextUnlocked": "3",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	},
+	{
+		"id": "3",
+        "caption": "Heeeeeeeey !",
+        "label": "",
+        "emmiter": "Ghost",
+        "require": "",
+        "nextUnlocked": "1",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	}
+]
