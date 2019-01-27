@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         transform.position = playerSpawnPosition.position;
-        playerSpawnPosition.position = new Vector3(0, -2.0f, 0);
+        // playerSpawnPosition.position = new Vector3(0, -2.0f, 0);
     }
 
     private void Update()
