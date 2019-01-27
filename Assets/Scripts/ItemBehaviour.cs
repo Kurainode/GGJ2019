@@ -53,7 +53,7 @@ public class ItemBehaviour : MonoBehaviour
     {
         if (lastUser && lastUser.lastUsed == gameObject && curentId != null && curentId != "")
         {
-            if (lastUser.GetComponent<SpeechDisplayer>().ended)
+            if (GameObject.Find(textData[curentId].emmiter).GetComponent<SpeechDisplayer>().ended)
             {
                 GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId].emmiter, textData[curentId].caption, textData[curentId].important);
                 curentId = textData[curentId].nextUnlocked;

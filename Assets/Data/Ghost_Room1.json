@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+        "caption": "Come on, find that damn key!",
+        "label": "",
+        "emmiter": "Ghost",
+        "require": "",
+        "nextUnlocked": "2",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	},
+	{
+		"id": "2",
+        "caption": "We don't have much time left!",
+        "label": "",
+        "emmiter": "Ghost",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	}
+]

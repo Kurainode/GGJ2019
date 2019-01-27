@@ -6,6 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public Vector2 direction;
+    public PlayerSpawnPosition playerSpawnPosition;
+
+    private void Awake()
+    {
+        transform.position = playerSpawnPosition.position;
+        playerSpawnPosition.position = new Vector3(0, -2.0f, 0);
+    }
 
     private void Update()
     {

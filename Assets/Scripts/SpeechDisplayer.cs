@@ -8,7 +8,7 @@ public class SpeechDisplayer : MonoBehaviour
     public GameObject textModel;
     public Transform interactionTextContainer;
     public bool ended;
-    InteractionText interactionText;
+    public InteractionText interactionText;
     public string Text
     {
         set
