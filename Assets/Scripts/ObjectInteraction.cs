@@ -11,7 +11,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (!GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused && Input.GetButtonDown("Action"))
         {
-            Vector3 playerBase = transform.position - new Vector3(0.0f, GetComponent<Renderer>().bounds.extents.y);
+            Vector3 playerBase = transform.position - new Vector3(0.0f, GetComponentInChildren<Renderer>().bounds.extents.y);
             RaycastHit2D hit = Physics2D.Raycast(playerBase, GetComponent<PlayerMovement>().direction, 0.9f, LayerMask.GetMask("Pickable"));
             if (hit && hit.collider)
             {

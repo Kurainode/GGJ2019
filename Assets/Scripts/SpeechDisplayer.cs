@@ -31,7 +31,7 @@ public class SpeechDisplayer : MonoBehaviour
 
     private void Update()
     {
-        interactionText.transform.position = new Vector3(transform.position.x, transform.position.y + GetComponent<Renderer>().bounds.extents.y + 0.5f, 0.0f);
+        interactionText.transform.position = new Vector3(transform.position.x, transform.position.y + GetComponentInChildren<Renderer>().bounds.extents.y + 0.5f, 0.0f);
         ended = interactionText.ended;
     }
 

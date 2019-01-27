@@ -65,23 +65,11 @@
         "label": "",
         "emmiter": "Parents",
         "require": "",
-        "nextUnlocked": "7",
-        "nextLocked": "",
-        "trigger": "",
-        "pickable": false,
-		"important": true
-    },
-    {
-        "id": "7",
-        "caption": "",
-        "label": "",
-        "emmiter": "",
-        "require": "",
         "nextUnlocked": "",
         "nextLocked": "",
         "trigger": "fadeout",
         "pickable": false,
-		"important": false
+		"important": true
     }
     
 ]

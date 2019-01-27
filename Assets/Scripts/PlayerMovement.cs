@@ -24,35 +24,35 @@ public class PlayerMovement : MonoBehaviour
                 direction = new Vector2(movement.x, movement.y).normalized;
             movement.y *= 0.75f;
             position += movement;
-            GetComponent<Animator>().SetFloat("walkSpeed", movement.magnitude);
+            GetComponentInChildren<Animator>().SetFloat("walkSpeed", movement.magnitude);
 
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
             {
                 if (movement.x > 0)
                 {
-                    GetComponent<Animator>().SetInteger("direction", 3); // 3 == right
+                    GetComponentInChildren<Animator>().SetInteger("direction", 3); // 3 == right
                 }
                 else
                 {
-                    GetComponent<Animator>().SetInteger("direction", 1); // 1 == left
+                    GetComponentInChildren<Animator>().SetInteger("direction", 1); // 1 == left
                 }
             } 
             else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
             {
                 if (movement.y > 0)
                 {
-                    GetComponent<Animator>().SetInteger("direction", 2); // 2 == back
+                    GetComponentInChildren<Animator>().SetInteger("direction", 2); // 2 == back
                 }
                 else
                 {
-                    GetComponent<Animator>().SetInteger("direction", 0); // 0 == front
+                    GetComponentInChildren<Animator>().SetInteger("direction", 0); // 0 == front
                 }
             }
             transform.position = position;
         }
         else
         {
-            GetComponent<Animator>().SetFloat("walkSpeed", 0.0f);
+            GetComponentInChildren<Animator>().SetFloat("walkSpeed", 0.0f);
         }
     }
 }
