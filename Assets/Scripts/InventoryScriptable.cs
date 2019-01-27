@@ -20,6 +20,7 @@ public class InventoryScriptable : MonoBehaviour
             GameObject.Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+        gameObject.name = GOName;
     }
 
     // Update is called once per frame

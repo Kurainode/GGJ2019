@@ -21,37 +21,50 @@ public class InteractionText : MonoBehaviour
             _text = value;
             ended = false;
             elapsed = 0.0f;
+
+            if (runningCoroutine != null)
+            {
+                StopCoroutine(runningCoroutine);
+            }
+            runningCoroutine = StartCoroutine(DisplayTextCharacterByCharacter());
         }
     }
     string _text = "";
     Text textComponent;
     float elapsed;
+    Coroutine runningCoroutine;
 
     private void Awake()
     {
         textComponent = GetComponent<Text>();
     }
 
-    private void Update()
+    IEnumerator DisplayTextCharacterByCharacter()
     {
-        elapsed += Time.deltaTime;
-        int len = (int)(elapsed * charPerSecond);
-        if (len > _text.Length)
-            len = _text.Length;
-        if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond && !manual)
+        while (true)
         {
-            textComponent.text = "";
-            ended = true;
-        }
-        else
-        {
-            textComponent.text = _text.Substring(0, len);
-            if (!manual)
-                ended = false;
-        }
-        if (ended == true)
-        {
-            textComponent.text = "";
+            elapsed += Time.deltaTime + 1.0f / charPerSecond;
+            int len = (int)(elapsed * charPerSecond);
+            if (len > _text.Length)
+                len = _text.Length;
+            else
+                GetComponent<AudioSource>().Play();
+            if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond && !manual)
+            {
+                textComponent.text = "";
+                ended = true;
+            }
+            else
+            {
+                textComponent.text = _text.Substring(0, len);
+                if (!manual)
+                    ended = false;
+            }
+            if (ended == true)
+            {
+                textComponent.text = "";
+            }
+            yield return new WaitForSeconds(1.0f / charPerSecond);
         }
     }
 }
