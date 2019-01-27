@@ -27,5 +27,9 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Animator>().SetFloat("walkSpeed", movement.magnitude);
             transform.position = position;
         }
+        else
+        {
+            GetComponent<Animator>().SetFloat("walkSpeed", 0.0f);
+        }
     }
 }

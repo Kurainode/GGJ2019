@@ -28,9 +28,12 @@ public class InventoryScriptable : MonoBehaviour
     {
         if (Input.GetButtonDown("Menu"))
         {
-            if (inventory.gameObject.activeInHierarchy == false)
+            if (inventory.gameObject.activeInHierarchy == false) // if inventory is not openned
             {
-                GetComponent<GlobalMessageEventSender>().GlobalMessage("OpenInventory");
+                if (!GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused)
+                {
+                    GetComponent<GlobalMessageEventSender>().GlobalMessage("OpenInventory");
+                }
             }
             else
             {
