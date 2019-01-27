@@ -37,7 +37,7 @@ public class ItemBehaviour : MonoBehaviour
         public T[] content;
     }
 
-    private void Awake()
+    private void Start()
     {
         string wrapper = string.Format("{{\"content\":{0}}}", json.text);
         textData = new Dictionary<string, JsonData>();
