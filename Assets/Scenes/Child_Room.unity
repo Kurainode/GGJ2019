@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 500915798}
   - component: {fileID: 500915797}
   m_Layer: 5
-  m_Name: Player
+  m_Name: PlayerAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 609591431}
   - component: {fileID: 609591432}
   m_Layer: 5
-  m_Name: Ghost
+  m_Name: GhostAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
