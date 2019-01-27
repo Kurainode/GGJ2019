@@ -9,10 +9,10 @@ public class ObjectInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetButtonDown("Action"))
+        if (!GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused && Input.GetButtonDown("Action"))
         {
             Vector3 playerBase = transform.position - new Vector3(0.0f, GetComponent<Renderer>().bounds.extents.y);
-            var hit = Physics2D.Raycast(playerBase, GetComponent<PlayerMovement>().direction, 0.9f, objectLayers);
+            RaycastHit2D hit = Physics2D.Raycast(playerBase, GetComponent<PlayerMovement>().direction, 0.9f, LayerMask.GetMask("Pickable"));
             if (hit && hit.collider)
             {
                 if (hit.collider.GetComponent<ItemBehaviour>())
@@ -20,9 +20,21 @@ public class ObjectInteraction : MonoBehaviour
                     hit.collider.GetComponent<ItemBehaviour>().Interact(gameObject);
                     lastUsed = hit.collider.gameObject;
                 }
-                else if (hit.collider.GetComponent<DoorBehaviour>())
+            }
+            else
+            {
+                hit = Physics2D.Raycast(playerBase, GetComponent<PlayerMovement>().direction, 0.9f, objectLayers);
+                if (hit && hit.collider)
                 {
-                    hit.collider.GetComponent<DoorBehaviour>().ChangeRoom();
+                    if (hit.collider.GetComponent<ItemBehaviour>())
+                    {
+                        hit.collider.GetComponent<ItemBehaviour>().Interact(gameObject);
+                        lastUsed = hit.collider.gameObject;
+                    }
+                    else if (hit.collider.GetComponent<DoorBehaviour>())
+                    {
+                        hit.collider.GetComponent<DoorBehaviour>().ChangeRoom();
+                    }
                 }
             }
         }

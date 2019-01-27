@@ -23,6 +23,11 @@ public class ItemBehaviour : MonoBehaviour
         public string trigger;
         public bool pickable;
         public bool important;
+        public bool haveChoice;
+        public string choice1;
+        public string nextChoice1;
+        public string choice2;
+        public string nextChoice2;
     }
 
     [System.Serializable]
@@ -45,7 +50,7 @@ public class ItemBehaviour : MonoBehaviour
     {
         lastUser = user.GetComponent<ObjectInteraction>();
         curentId = startId;
-        GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId].emmiter, textData[curentId].caption, textData[curentId].important);
+        GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
         curentId = textData[curentId].nextUnlocked;
     }
 
@@ -53,10 +58,19 @@ public class ItemBehaviour : MonoBehaviour
     {
         if (lastUser && lastUser.lastUsed == gameObject && curentId != null && curentId != "")
         {
-            if (GameObject.Find(textData[curentId].emmiter).GetComponent<SpeechDisplayer>().ended)
+            if ((!textData[curentId].important && GameObject.Find(textData[curentId].emmiter).GetComponent<SpeechDisplayer>().ended)
+                || (textData[curentId].important && GameObject.Find("Important Text Canvas").GetComponent<ImportantText>().interactionText.ended))
             {
-                GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId].emmiter, textData[curentId].caption, textData[curentId].important);
-                curentId = textData[curentId].nextUnlocked;
+                GameObject.Find("EventSystem").GetComponent<EventDispatcher>().Talk(textData[curentId]);
+                if (textData[curentId].important && textData[curentId].haveChoice)
+                {
+                    curentId = (GameObject.Find("Important Text Canvas").GetComponent<ImportantText>().selectedChoice == 1) ?
+                        textData[curentId].nextChoice1 : textData[curentId].nextChoice2;
+                    Debug.Log(curentId);
+                }
+                else {
+                    curentId = textData[curentId].nextUnlocked;
+                }
             }
         }
         else

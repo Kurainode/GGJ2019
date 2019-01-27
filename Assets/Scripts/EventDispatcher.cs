@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class EventDispatcher : MonoBehaviour
 {
-    public void Talk(string character, string text, bool important)
-    {
-        if (important)
-        {
+    public ImportantText importantText;
+    public bool paused;
 
+    public void Talk(ItemBehaviour.JsonData data)
+    {
+        if (data.important)
+        {
+            importantText.gameObject.SetActive(true);
+            if (!data.haveChoice)
+                importantText.DisplayText(data.emmiter, data.caption);
+            else
+                importantText.DisplayText(data.emmiter, data.caption, data.choice1, data.choice2);
         }
         else
         {
-            GameObject characterGO = GameObject.Find(character);
+            GameObject characterGO = GameObject.Find(data.emmiter);
             if (characterGO)
             {
                 var speechDisplayer = characterGO.GetComponent<SpeechDisplayer>();
-                speechDisplayer.Text = text;
+                speechDisplayer.Text = data.caption;
             }
         }
     }

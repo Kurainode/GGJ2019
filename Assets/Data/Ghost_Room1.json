@@ -9,11 +9,23 @@
         "nextLocked": "",
         "trigger": "",
         "pickable": false,
-		"important": false
+		"important": true
 	},
 	{
 		"id": "2",
         "caption": "We don't have much time left!",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "3",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": true
+	},
+	{
+		"id": "3",
+        "caption": "Do tou want me to repeat?",
         "label": "",
         "emmiter": "Ghost",
         "require": "",
@@ -21,6 +33,11 @@
         "nextLocked": "",
         "trigger": "",
         "pickable": false,
-		"important": false
+		"important": true,
+		"haveChoice": true,
+		"choice1": "Yes",
+		"choice2": "No",
+		"nextChoice1": "1",
+		"nextChoice2": ""
 	}
 ]

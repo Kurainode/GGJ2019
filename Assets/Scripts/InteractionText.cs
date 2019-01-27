@@ -8,6 +8,7 @@ public class InteractionText : MonoBehaviour
     public float charPerSecond;
     public float timeAtEnd;
     public bool ended;
+    public bool manual;
     public string TextToDisplay
     {
         get
@@ -37,7 +38,7 @@ public class InteractionText : MonoBehaviour
         int len = (int)(elapsed * charPerSecond);
         if (len > _text.Length)
             len = _text.Length;
-        if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond)
+        if (elapsed * charPerSecond >= _text.Length + timeAtEnd * charPerSecond && !manual)
         {
             textComponent.text = "";
             ended = true;
@@ -45,7 +46,12 @@ public class InteractionText : MonoBehaviour
         else
         {
             textComponent.text = _text.Substring(0, len);
-            ended = false;
+            if (!manual)
+                ended = false;
+        }
+        if (ended == true)
+        {
+            textComponent.text = "";
         }
     }
 }

@@ -5,6 +5,7 @@ TextureImporter:
     21300000: PlayerFront_0
     21300002: PlayerFront_1
     21300004: PlayerFront_2
+    21300006: PlayerFront_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -153,6 +154,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 519c3ed7e12924048a54911f34729266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerFront_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 887
+        width: 550
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e546114d9304ed248a760e21a1de6bdf
       vertices: []
       indices: 
       edges: []
