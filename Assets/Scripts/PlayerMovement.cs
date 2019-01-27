@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
             movement.y *= 0.75f;
             position += movement;
             GetComponent<Animator>().SetFloat("walkSpeed", movement.magnitude);
+            GetComponent<Animator>().SetFloat("vertical", Input.GetAxis("Vertical"));
+            GetComponent<Animator>().SetFloat("horizontal", Input.GetAxis("Horizontal"));
             transform.position = position;
         }
         else
