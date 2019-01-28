@@ -1,26 +1,38 @@
 [
-	{
-		"id": "1",
-        "caption": "Oh, you’re here ! Did you have fun in the house ?",
-        "label": "",
-        "emmiter": "Player",
-        "require": "",
-        "nextUnlocked": "2",
-        "nextLocked": "",
-        "trigger": "",
-        "pickable": false,
-		"important": true
-	},
-	{
-		"id": "2",
-        "caption": "How about we go replenish your little tummy, missy ?",
-        "label": "",
-        "emmiter": "Player",
-        "require": "",
-        "nextUnlocked": "",
-        "nextLocked": "",
-        "trigger": "",
-        "pickable": false,
-		"important": true
-	}
+  {
+    "id": "1",
+    "caption": "Oh, you’re here ! Did you have fun in the house ?",
+    "label": "",
+    "emmiter": "Player",
+    "require": "",
+    "nextUnlocked": "2",
+    "nextLocked": "",
+    "trigger": "",
+    "pickable": false,
+    "important": true
+  },
+  {
+    "id": "2",
+    "caption": "How about we go replenish your little tummy, missy ?",
+    "label": "",
+    "emmiter": "Player",
+    "require": "",
+    "nextUnlocked": "3",
+    "nextLocked": "",
+    "trigger": "",
+    "pickable": false,
+    "important": true
+  },
+  {
+    "id": "3",
+    "caption": "",
+    "label": "",
+    "emmiter": "",
+    "require": "",
+    "nextUnlocked": "",
+    "nextLocked": "",
+    "trigger": "nextScene",
+    "pickable": false,
+    "important": false
+  }
 ]
