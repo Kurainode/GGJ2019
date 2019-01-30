@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ObjectInteraction))]
 public class AutostartItemInteraction : MonoBehaviour
 {
-
-    public PlayerMovement player;
     public ItemBehaviour item;
     public float delay;
 
@@ -18,7 +17,7 @@ public class AutostartItemInteraction : MonoBehaviour
     IEnumerator StartDelayed()
     {
         yield return new WaitForSeconds(delay);
-        item.Interact(player.gameObject);
-        player.GetComponent<ObjectInteraction>().lastUsed = item.gameObject;
+        item.Interact(gameObject);
+        GetComponent<ObjectInteraction>().lastUsed = item.gameObject;
     }
 }

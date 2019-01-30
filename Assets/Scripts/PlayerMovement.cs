@@ -30,29 +30,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (movement.x > 0)
                 {
-                    GetComponentInChildren<Animator>().SetInteger("direction", 3); // 3 == right
+                    GetComponent<Animator>().SetInteger("direction", 3); // 3 == right
                 }
                 else
                 {
-                    GetComponentInChildren<Animator>().SetInteger("direction", 1); // 1 == left
+                    GetComponent<Animator>().SetInteger("direction", 1); // 1 == left
                 }
             } 
             else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
             {
                 if (movement.y > 0)
                 {
-                    GetComponentInChildren<Animator>().SetInteger("direction", 2); // 2 == back
+                    GetComponent<Animator>().SetInteger("direction", 2); // 2 == back
                 }
                 else
                 {
-                    GetComponentInChildren<Animator>().SetInteger("direction", 0); // 0 == front
+                    GetComponent<Animator>().SetInteger("direction", 0); // 0 == front
                 }
             }
             transform.position = position;
         }
         else
         {
-            GetComponentInChildren<Animator>().SetFloat("walkSpeed", 0.0f);
+            GetComponent<Animator>().SetFloat("walkSpeed", 0.0f);
         }
     }
 }

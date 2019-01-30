@@ -134,13 +134,13 @@
 	},
 	{
 		"id": "10",
-        "caption": "Great !",
+        "caption": "Great ! We should get to the attic.",
         "label": "",
         "emmiter": "Ghost",
         "require": "",
         "nextUnlocked": "",
         "nextLocked": "",
-        "trigger": "",
+        "trigger": "ghostFollow",
         "pickable": false,
 		"important": true
 	}

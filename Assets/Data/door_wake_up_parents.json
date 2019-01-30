@@ -1,0 +1,14 @@
+[
+    {
+		"id": "1",
+        "caption": "I don't want to wake up my parents",
+        "label": "",
+        "emmiter": "Player",
+        "require": "",
+        "nextUnlocked": "",
+        "nextLocked": "",
+        "trigger": "",
+        "pickable": false,
+		"important": false
+	}
+]

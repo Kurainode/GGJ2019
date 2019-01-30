@@ -31,7 +31,7 @@
     "require": "",
     "nextUnlocked": "",
     "nextLocked": "",
-    "trigger": "nextScene",
+    "trigger": "fadein",
     "pickable": false,
     "important": false
   }

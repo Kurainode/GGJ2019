@@ -3773,12 +3773,27 @@ PrefabInstance:
     - target: {fileID: 8909049404216584095, guid: 0732b6181c837e14193e52772cb9d52a,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8909049404216584095, guid: 0732b6181c837e14193e52772cb9d52a,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909049404216584095, guid: 0732b6181c837e14193e52772cb9d52a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909049404216584095, guid: 0732b6181c837e14193e52772cb9d52a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909049404216584095, guid: 0732b6181c837e14193e52772cb9d52a,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 257
       objectReference: {fileID: 0}
     - target: {fileID: 8909049403972133587, guid: 0732b6181c837e14193e52772cb9d52a,
         type: 3}

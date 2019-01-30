@@ -194,7 +194,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8909049403972133589}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8489046596626566384}
+        m_MethodName: PreviousPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8909049404992509869}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: ebc43e456d6a47a4dadc02c46cd6feee,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8909049404004040567
@@ -208,6 +231,7 @@ GameObject:
   - component: {fileID: 8909049404004040552}
   - component: {fileID: 8909049404004040554}
   - component: {fileID: 8909049404004040553}
+  - component: {fileID: 8489046596626566384}
   m_Layer: 5
   m_Name: Layout - Book
   m_TagString: Untagged
@@ -274,6 +298,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8489046596626566384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909049404004040567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7972272663881ed4391ac49a4c70be81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diaryPages:
+  - {fileID: 4900000, guid: 4b385e5c2a916214e9761a74188adfde, type: 3}
+  - {fileID: 4900000, guid: 9cbf395971d328741a0e1abc256131b5, type: 3}
+  - {fileID: 4900000, guid: 9770e3666018adc4ab91219c8b54e78f, type: 3}
+  - {fileID: 4900000, guid: 946b1a36ff794614a8b8698cfafa5bcc, type: 3}
+  - {fileID: 4900000, guid: 6f9276b4eadd0c642bf6f97ed618c38d, type: 3}
+  diaryText: {fileID: 8909049404216584095}
 --- !u!1 &8909049404216584093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1241,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8909049405181914414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8489046596626566384}
+        m_MethodName: NextPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8909049404992509869}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b161e7e5aeb3b16438e6526343fe334f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8909049405409389546
