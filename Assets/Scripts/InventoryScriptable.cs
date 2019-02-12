@@ -55,6 +55,7 @@ public class InventoryScriptable : MonoBehaviour
         // TODO: setup layout and default page
         GetComponent<AudioSource>().PlayOneShot(openSound);
         GetComponent<Animator>().SetTrigger("toggleVisibility");
+        GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused = true;
     }
 
     public void CloseInventory()
@@ -62,6 +63,14 @@ public class InventoryScriptable : MonoBehaviour
         //inventory.gameObject.SetActive(false);
         GetComponent<AudioSource>().PlayOneShot(closeSound);
         GetComponent<Animator>().SetTrigger("toggleVisibility");
+        GameObject.Find("EventSystem").GetComponent<EventDispatcher>().paused = false;
+    }
+
+    // Make the diary possessed by the player
+    public void PossessDiary()
+    {
+        possessedByPlayer = true;
+        OpenInventory();
     }
 
     public void PickItem()

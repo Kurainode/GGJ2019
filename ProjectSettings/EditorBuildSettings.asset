@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Child_Room.unity
     guid: bd0bd7df9c2749e4a9db07ede92cc629
+  - enabled: 1
+    path: Assets/Scenes/Grenier_diary.unity
+    guid: 0cccc2eb7a684b64da15086a3ff8e79d
   m_configObjects: {}

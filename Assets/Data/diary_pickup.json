@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "caption": "",
+    "label": "",
+    "emmiter": "Player",
+    "require": "",
+    "nextUnlocked": "",
+    "nextLocked": "",
+    "trigger": "pick diary",
+    "pickable": false,
+    "important": false
+  }
+]

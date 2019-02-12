@@ -35,18 +35,18 @@
         "pickable": false,
 		"important": true
     },
-	{
-		"id": "4",
-        "caption": "Look, it’s our new home !",
-        "label": "",
-        "emmiter": "Player",
-        "require": "",
-        "nextUnlocked": "5",
-        "nextLocked": "",
-        "trigger": "",
-        "pickable": false,
-		"important": true
-    },
+  {
+    "id": "4",
+    "caption": "Look, it’s our new home !",
+    "label": "",
+    "emmiter": "Player",
+    "require": "",
+    "nextUnlocked": "5",
+    "nextLocked": "",
+    "trigger": "fadeout",
+    "pickable": false,
+    "important": true
+  },
 	{
 		"id": "5",
         "caption": "I know you’re sad to leave your friends but look how nice the city is… You will make new friends in no time !",
@@ -67,7 +67,7 @@
         "require": "",
         "nextUnlocked": "",
         "nextLocked": "",
-        "trigger": "fadeout",
+        "trigger": "",
         "pickable": false,
 		"important": true
     }
